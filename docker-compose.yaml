@@ -1,0 +1,10 @@
+services:
+  CEDDB:
+    image: postgres:latest
+    container_name: CEDCyber-Database
+    ports:
+      - ${DATABASE_PORT}:6789
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASS}
