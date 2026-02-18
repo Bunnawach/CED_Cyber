@@ -1,0 +1,22 @@
+services:
+
+  CEDadmin:
+    image: dpage/pgadmin4
+    container_name: CEDCyber-Admin
+    ports:
+      - ${ADMIN_PORT}
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${ADMIN_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${ADMIN_PASSWORD}
+    
+=======
+  CEDDB:
+    image: postgres:latest
+    container_name: CEDCyber-Database
+    ports:
+      - ${DATABASE_PORT}:6789
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASS}
+
