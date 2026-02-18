@@ -1,0 +1,13 @@
+services:
+  CED_Cyber_App:
+    image: prawee/strapi:latest
+    container_name: CED_Cyber_App
+    ports:
+    - ${APP_PORT}:1337
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: "${DB_NAME}"
+      DATABASE_HOST: CED_CYBER_DB
+      DATABASE_PORT: "${DB_PORT}"
+      DATABASE_USERNAME: "${DB_USER}"
+      DATABASE_PASSWORD: "${DB_PASS}"
