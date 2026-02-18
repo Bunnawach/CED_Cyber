@@ -1,4 +1,16 @@
 services:
+  CED_APP:
+    image: prawee/strapi:latest
+    container_name: CED_CYBER_APP
+    ports:
+    - ${APP_PORT}:1337
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: "${DATABASE_NAME}"
+      DATABASE_HOST: CED_CYBER_DB
+      DATABASE_PORT: "${DATABASE_PORT}"
+      DATABASE_USERNAME: "${DATABASE_USER}"
+      DATABASE_PASSWORD: "${DATABASE_PASS}"
 
   CEDadmin:
     image: dpage/pgadmin4
@@ -9,7 +21,6 @@ services:
       - PGADMIN_DEFAULT_EMAIL=${ADMIN_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${ADMIN_PASSWORD}
     
-=======
   CEDDB:
     image: postgres:latest
     container_name: CEDCyber-Database
