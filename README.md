@@ -2,10 +2,10 @@
 
 ## Information
 - Bunnawach Bamrung
-- Direk Puankum
+- Direk Puankham
 - Kasidach Prabpal
-- Sarawut Bunprakrong
-- Kanokwan Pantang
+- Sarawut Bboonprakrong
+- Kanokwan Phantaeng
 
 ## Environment
 
