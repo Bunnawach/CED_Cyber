@@ -1,7 +1,7 @@
 services:
-  CED_Cyber_App:
+  CED_APP:
     image: prawee/strapi:latest
-    container_name: CED_Cyber_App
+    container_name: CED_CYBER_APP
     ports:
     - ${APP_PORT}:1337
     environment:
