@@ -1,0 +1,10 @@
+services:
+  CEDadmin:
+    image: dpage/pgadmin4
+    container_name: CEDCyber-Admin
+    ports:
+      - ${ADMIN_PORT}
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${ADMIN_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${ADMIN_PASSWORD}
+    
